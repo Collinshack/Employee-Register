@@ -1,0 +1,29 @@
+ {% extends 'templates/employeeregister.html' %}
+
+  {% block content %}
+
+  <table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mobile</th>
+        <th>Role</th>
+        <th><a href="/" id="Add_New" style="border: 2px solid green; text-decoration:none; padding:5px 10px;">Add New</a></th>
+    </tr>
+    {% for employee in employee_lists %}
+    <tr>
+        
+        <td>{{employee.first_name}}</td>
+        <td>{{employee.last_name}}</td>
+        <td>{{employee.mobile}}</td>
+        <td>{{employee.role}}</td>
+  
+        <td><a href="{% url 'employee_update' employee.id %}"><button class="edit-btn">Edit</button></a></td>
+        <td><a href="{% url 'delete_employee' employee.id %}"><button class="delete-btn">Delete</button></a></td>
+    </tr>
+    {% endfor %} 
+    
+  </table>
+ {% endblock  %}
+
+ 

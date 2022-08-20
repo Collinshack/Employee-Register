@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Employee Register </title>
+</head>
+<body>
+    <div class="container">
+    <h1>Employee Register</h1>
+    <h4><em>A Django Application for Registering Employees in an Organization</em></h4>
+    <hr />
+    <div class="form">
+        {% block content %}
+<form action="/" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <br />
+    <button type="submit" class="sbt-button">Submit</button>
+    <a href="employee_list" class="list-btn">Back to List</a>
+</form> 
+</div>
+</div>
+{% endblock %}   
+
+</body>
+</html>
