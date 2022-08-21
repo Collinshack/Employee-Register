@@ -9,3 +9,6 @@ class EmployeeForm(forms.ModelForm):
         model = EmployeeRegister
         fields = ('first_name', 'last_name', 'Employee_ID', 'mobile', 'role')
      
+    def __init__(self, *args, **kwargs):
+        super(EmployeeForm, self).__init__(*args, **kwargs)
+        self.fields['role'].empty_label = "Select"

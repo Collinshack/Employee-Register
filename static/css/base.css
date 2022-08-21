@@ -61,7 +61,7 @@ form input{
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    padding-left: 30%;
+    padding: 8px 10px;
 }
 
 
@@ -72,8 +72,5 @@ th, td{
     padding-bottom: 10px;
 }
 
-table legend{
-    color: red;
-    font-weight: bolder;
-}
+
 
